@@ -22,9 +22,9 @@ kotlin {
 dependencies {
     implementation(project(":domain"))
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:${Libs.coroutines}")
-    implementation("com.squareup.retrofit2:retrofit:${Libs.retrofit}")
-    implementation("com.squareup.retrofit2:converter-gson:${Libs.retrofit}")
-    testImplementation("junit:junit:${Libs.junit}")
+    api("com.squareup.retrofit2:retrofit:${Libs.retrofit}")
+    api("com.squareup.retrofit2:converter-gson:${Libs.retrofit}")
+    testApi("junit:junit:${Libs.junit}")
     testApi("org.jetbrains.kotlinx:kotlinx-coroutines-test:${Libs.coroutines}")
     testApi("org.mockito.kotlin:mockito-kotlin:${Libs.mockitoKotlin}")
     testApi("app.cash.turbine:turbine:${Libs.turbine}")
