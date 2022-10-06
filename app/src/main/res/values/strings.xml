@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CountryInfo</string>
+    <string name="currency">Currency:</string>
+    <string name="language">Language:</string>
+    <string name="alert_button_ok">OK</string>
+    <string name="alert_button_cancel">Cancel</string>
+    <string name="error_title">Error</string>
+</resources>
