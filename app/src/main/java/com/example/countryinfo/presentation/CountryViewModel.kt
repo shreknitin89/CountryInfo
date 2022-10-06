@@ -8,6 +8,7 @@ import com.example.domain.repo.CountryServiceState
 import kotlinx.coroutines.channels.BufferOverflow
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
 
 /**
@@ -18,8 +19,7 @@ class CountryViewModel constructor(
 ) : ViewModel() {
     private val countriesList = ArrayList<Country>()
 
-    private val _uiStateFlow =
-        MutableSharedFlow<UiState>(replay = 1)
+    private val _uiStateFlow = MutableStateFlow<UiState>(UiState.Loading)
     val uiStateFlow: Flow<UiState> get() = _uiStateFlow
     private val _countrySelectionFlow =
         MutableSharedFlow<Country>(

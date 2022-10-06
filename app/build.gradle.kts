@@ -38,18 +38,6 @@ android {
     buildFeatures {
         viewBinding = true
     }
-
-    kotlin {
-        sourceSets {
-            test {
-                dependencies {
-                    implementation("org.jetbrains.kotlin:kotlin-test-annotations-common")
-                    implementation("org.jetbrains.kotlin:kotlin-test-common")
-                }
-            }
-        }
-    }
-
 }
 
 dependencies {
@@ -62,6 +50,10 @@ dependencies {
     implementation("androidx.navigation:navigation-fragment-ktx:${Libs.navigation}")
     implementation("androidx.navigation:navigation-ui-ktx:${Libs.navigation}")
 
+    testImplementation("junit:junit:${Libs.junit}")
+    testImplementation("app.cash.turbine:turbine:${Libs.turbine}")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:${Libs.coroutines}")
+    testImplementation("org.mockito.kotlin:mockito-kotlin:${Libs.mockitoKotlin}")
     androidTestImplementation("androidx.test.ext:junit:${Libs.androidXJUnit}")
     androidTestImplementation("androidx.test.espresso:espresso-core:${Libs.espresso}")
 }

@@ -24,9 +24,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:${Libs.coroutines}")
     api("com.squareup.retrofit2:retrofit:${Libs.retrofit}")
     api("com.squareup.retrofit2:converter-gson:${Libs.retrofit}")
-    testApi("junit:junit:${Libs.junit}")
-    testApi("org.jetbrains.kotlinx:kotlinx-coroutines-test:${Libs.coroutines}")
-    testApi("org.mockito.kotlin:mockito-kotlin:${Libs.mockitoKotlin}")
-    testApi("app.cash.turbine:turbine:${Libs.turbine}")
-
+    testImplementation("junit:junit:${Libs.junit}")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:${Libs.coroutines}")
+    testImplementation("org.mockito.kotlin:mockito-kotlin:${Libs.mockitoKotlin}")
 }

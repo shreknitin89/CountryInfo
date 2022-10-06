@@ -28,7 +28,7 @@ abstract class BaseRemoteDataSource {
                 }
             }
         } catch (exception: Exception) {
-            ResultWrapper.NetworkError
+            ResultWrapper.NetworkError(exception.localizedMessage)
         }
     }
 }

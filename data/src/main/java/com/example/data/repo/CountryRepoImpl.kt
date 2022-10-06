@@ -43,7 +43,8 @@ class CountryRepoImpl constructor(
                 CountryServiceState.ServiceFailure(error)
             }
             is ResultWrapper.NetworkError -> {
-                CountryServiceState.ServiceFailure("Network issue")
+                val error = remoteResultWrapper.message
+                CountryServiceState.ServiceFailure(error)
             }
         }
     }
